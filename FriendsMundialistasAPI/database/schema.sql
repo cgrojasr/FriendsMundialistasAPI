@@ -15,7 +15,7 @@ BEGIN
         IdEquipo INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
         Nombre NVARCHAR(100) NOT NULL,
         IdGrupo INT NULL,
-        FechaCreacionUtc DATETIMEOFFSET NOT NULL,
+        FechaCreacion DATETIMEOFFSET NOT NULL,
         CONSTRAINT FK_Equipos_Grupos FOREIGN KEY (IdGrupo) REFERENCES dbo.Grupos(IdGrupo)
     );
 END

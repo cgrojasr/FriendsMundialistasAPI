@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cb0bf688ea27e35eb68206cbbb919e963e44609")]
 [assembly: System.Reflection.AssemblyProductAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
