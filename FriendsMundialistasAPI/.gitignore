@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+
+# Local-only config overrides
+appsettings.Local.json
+appsettings.*.local.json
+
+# User/tooling files
+*.user
+*.suo
+*.swp
+*.tmp
+.DS_Store

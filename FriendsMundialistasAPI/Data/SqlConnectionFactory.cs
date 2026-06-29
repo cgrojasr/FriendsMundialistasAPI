@@ -5,8 +5,10 @@ namespace FriendsMundialistasAPI.Data;
 
 public sealed class SqlConnectionFactory(IConfiguration configuration) : IDbConnectionFactory
 {
-    private readonly string _connectionString = configuration.GetConnectionString("FriendsMundialistasDb")
-        ?? throw new InvalidOperationException("La cadena de conexion FriendsMundialistasDb no esta configurada.");
+    private readonly string _connectionString =
+        !string.IsNullOrWhiteSpace(configuration.GetConnectionString("FriendsMundialistasDb"))
+            ? configuration.GetConnectionString("FriendsMundialistasDb")!
+            : throw new InvalidOperationException("La cadena de conexion FriendsMundialistasDb no esta configurada o esta vacia.");
 
     /// <summary>
     /// Crea y abre una conexion SQL Server usando la cadena de conexion configurada.

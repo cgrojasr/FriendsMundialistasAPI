@@ -26,6 +26,14 @@ builder.Services.AddCors(options =>
 builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("Auth"));
 
 var authSettings = builder.Configuration.GetSection("Auth").Get<AuthSettings>() ?? new AuthSettings();
+if (string.IsNullOrWhiteSpace(authSettings.Issuer) ||
+    string.IsNullOrWhiteSpace(authSettings.Audience) ||
+    string.IsNullOrWhiteSpace(authSettings.SigningKey) ||
+    Encoding.UTF8.GetByteCount(authSettings.SigningKey) < 32)
+{
+    throw new InvalidOperationException(
+        "Configuracion JWT invalida. Define Auth:Issuer, Auth:Audience y Auth:SigningKey (minimo 32 bytes) en appsettings o variables de entorno.");
+}
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

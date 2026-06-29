@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("2f14f5d5-532a-4ab6-ab86-543ed017de5f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cb0bf688ea27e35eb68206cbbb919e963e44609")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4db484da4f8c80f96d2e3be26998ac3cf53cf0ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FriendsMundialistasAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
